@@ -1,0 +1,21 @@
+{
+    "main": {
+    "prefix": "main",
+    "body": [
+      "/*",
+		  "URL:${1:https://atcoder.jp/contests/abc001/tasks/abc001_1}",
+		  "DATE:$CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE",
+      "*/",
+      "",
+      "#include<iostream>",
+      "#include<algorithm>",
+      "using namespace std;",
+      "",
+      "int main(){",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "main"
+  },
+}
