@@ -1,6 +1,6 @@
 """
-URL:https://atcoder.jp/contests/typical90/tasks/typical90_bl
-DATE:2021/09/24
+URL:https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_b
+DATE:2021/09/26
 """
 import sys
 # sys.setrecursionlimit(10**9)
@@ -27,32 +27,16 @@ read_strs_list = lambda: list(map(str,list(readline().rstrip())))
 read_strs_array = lambda h:list(list(readline().rstrip()) for _ in range(h))
 
 # solve
+from math import ceil,floor
 
 def main():
-    N,Q = read_ints()
-    A = read_ints_list()
-    B = [0]*(N)
-    
-    ans = 0
-    for i in range(N-1):
-        B[i] = A[i+1]-A[i]
-        ans += abs(B[i])
-    
-    for i in range(Q):
-        l,r,v = read_ints()
-        l-=1
-        r-=1
-        
-        tmp1 = abs(B[l-1])+abs(B[r])
-        if l>0:
-            B[l-1] += v
-        if r<(N-1):
-            B[r] -= v
-        tmp2 = abs(B[l-1])+abs(B[r])
-        ans+=(tmp2-tmp1)
+    H,W = read_ints()
+    if H<=1 or W<=1:
+        print(1)
+    else:
+        ans = ceil(H/2)*ceil(W/2)+floor(H/2)*floor(W/2)
         print(ans)
-    
-    
-        
+    return 0
+
 if __name__=='__main__':
     main()
